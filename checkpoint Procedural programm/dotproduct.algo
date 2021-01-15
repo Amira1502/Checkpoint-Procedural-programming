@@ -1,0 +1,24 @@
+PROCEDURE dot_product(v1: ARRAY_OF INTEGER[], v2:ARRAY_OF INTEGER[], result:INTEGER)
+VAR
+    v1: ARRAY_OF INTEGER[3];
+    v2: ARRAY_OF INTEGER[3];
+    result:INTEGER:=0;
+BEGIN
+    FOR I FROM 0 TO 3 DO{
+        read(v1[i]);
+        FOR J FROM 0 TO 3 DO{
+            read(v2[j]);
+            result := v1[i] * v2[j];
+        }
+    }
+    write(result);
+END
+//Algo 
+ALGORITHM dot_product
+VAR
+ res : INTEGER
+BEGIN
+    IF (dot_product(res)==0) THEN
+        write("v1 and v2 are orthogonal")
+    END_IF
+END
