@@ -1,12 +1,12 @@
-PROCEDURE dot_product(v1: ARRAY_OF INTEGER[], v2:ARRAY_OF INTEGER[], result:INTEGER)
+PROCEDURE dot_product(v1,v2:ARRAY, result:FLOAT)
 VAR
-    v1: ARRAY_OF INTEGER[2];
-    v2: ARRAY_OF INTEGER[2];
+    v1: ARRAY_OF FLOAT[2];
+    v2: ARRAY_OF FLOAT[2];
     result:INTEGER:=0;
     i:INTEGER;
 BEGIN
     FOR i FROM 0 TO 2 DO{
-       result := result+ v1[i] * v2[j];
+       result := result+ v1[i] * v2[i];
         }
     }
     write(result);
@@ -14,9 +14,24 @@ END
 //Algo 
 ALGORITHM dot_product
 VAR
- res : INTEGER
+ res : FLOAT
 BEGIN
     IF (dot_product(res)==0) THEN
         write("v1 and v2 are orthogonal")
     END_IF
+END
+//function dotproduct
+FUNCTION dot_product(v1,v2:ARRAY_OF FLOAT[]):FLOAT
+VAR
+  v1: ARRAY_OF FLOAT[2];
+  v2: ARRAY_OF FLOAT[2];
+  result:FLOAT:=0;
+  i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO 2 DO{
+       result := result+ v1[i] * v2[i];
+        }
+    }
+    END-FOR
+    return(result);
 END
