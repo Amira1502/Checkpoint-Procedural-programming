@@ -1,14 +1,12 @@
 PROCEDURE dot_product(v1: ARRAY_OF INTEGER[], v2:ARRAY_OF INTEGER[], result:INTEGER)
 VAR
-    v1: ARRAY_OF INTEGER[3];
-    v2: ARRAY_OF INTEGER[3];
+    v1: ARRAY_OF INTEGER[2];
+    v2: ARRAY_OF INTEGER[2];
     result:INTEGER:=0;
+    i:INTEGER;
 BEGIN
-    FOR I FROM 0 TO 3 DO{
-        read(v1[i]);
-        FOR J FROM 0 TO 3 DO{
-            read(v2[j]);
-            result := v1[i] * v2[j];
+    FOR i FROM 0 TO 2 DO{
+       result := result+ v1[i] * v2[j];
         }
     }
     write(result);
